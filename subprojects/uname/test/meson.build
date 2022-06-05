@@ -12,4 +12,4 @@ add_test_setup('valgrind',
 	is_default: true,
 )
 
-test('Valgrind memcheck', TEMPLATE, suite: 'valgrind')
+test('Valgrind memcheck', uname, suite: 'valgrind')

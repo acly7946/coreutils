@@ -1,11 +1,11 @@
-TEMPLATE(1)
+uname(1)
 
 # NAME
 
-TEMPLATE - TEMPLATE TEMPLATE
+uname - uname uname
 
 # SYNOPSIS
-*TEMPLATE* [OPTIONS]
+*uname* [OPTIONS]
 
 # OPTIONS
 

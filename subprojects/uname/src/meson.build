@@ -1,5 +1,5 @@
-TEMPLATE = executable(
-	'TEMPLATE',
+uname = executable(
+	'uname',
 	'main.c',
 	#dependencies:,
 	include_directories: incdir,
