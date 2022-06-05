@@ -19,7 +19,7 @@ Dependencies:
 _\* Compile-time dep_
 
 ``` sh
-# Copy using button here →
+# Copy using button there -->
 git clone "https://github.com/acly7946/coreutils.git"
 cd coreutils/
 meson build/
