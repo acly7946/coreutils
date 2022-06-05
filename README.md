@@ -3,7 +3,7 @@ Some of the core unix utilities
 
 | Utility |  TODO   |   WIP   |  DONE   |
 | ------- | ------- | ------- | ------- |
-| uname   | &check; |         |         |
+| uname   |         | &check; |         |
 
 ## Building
 
