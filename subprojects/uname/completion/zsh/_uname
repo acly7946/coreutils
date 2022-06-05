@@ -14,5 +14,11 @@
 # -------------------------------
 
 _arguments -s \
-	'(-h --help)'{-h,--help}'[Show help message and quit]' \
-	'(-V --version)'{-v,--version}'[Show version number and quit]'
+	'(-a --all)'{-a,--all}'[Print all information]' \
+	'(-m --machine)'{-m,--machine}'[Print machine name]' \
+	'(-n --nodename)'{-n,--nodename}'[Print node name]' \
+	'(-r --kernel-release)'{-r,--kernel-release}'[Print kernel release]' \
+	'(-s --kernel-name)'{-s,--kernel-name}'[Print kernel name]' \
+	'(-v --kernel-version)'{-v,--kernel-version}'[Print kernel version]' \
+	'(-h --help)'{-h,--help}'[Show help message and quit]'
+	'(-V --version)'{-V,--version}'[Show version number and quit]'
