@@ -11,8 +11,8 @@ Some of the core unix utilities
 ## Building
 
 Dependencies:
-* C compiler \*
-* meson \*
+* GCC/Clang \*
+* meson (>=0.59.0) \*
 * ninja \*
 * scdoc (optional: man pages)\*
 
