@@ -2,7 +2,7 @@
 Some of the core unix utilities
 
 | Utility |  TODO   |   WIP   |  DONE   |
-| ------- | ------- | ------- | ------- |
+| ------- | :-----: | :-----: | :-----: |
 | cut     | &check; |         |         |
 | ls      | &check; |         |         |
 | uname   |         | &check; |         |
