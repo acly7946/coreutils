@@ -19,10 +19,6 @@ add_project_arguments(
 	language: 'c'
 )
 
-datadir = get_option('datadir')
-sysconfdir = get_option('sysconfdir')
-prefix = get_option('prefix')
-
 summary({
 	'bash-completions': get_option('bash-completions'),
 	'fish-completions': get_option('fish-completions'),
