@@ -1,13 +1,13 @@
 # Coreutils
 Some of the core unix utilities
 
-| Utility |  TODO   |   WIP   |  DONE   |
-| ------- | :-----: | :-----: | :-----: |
-| cut     | &check; |         |         |
-| ls      | &check; |         |         |
-| uname   |         | &check; |         |
-| uptime  | &check; |         |         |
-| yes     |         | &check; |         |
+| Utility | Not started | In Progress | Working |
+| ------- | :---------: | :---------: | :-----: |
+| cut     |   &check;   |             |         |
+| ls      |   &check;   |             |         |
+| uname   |             |   &check;   |         |
+| uptime  |   &check;   |             |         |
+| yes     |             |             | &check; |
 
 ## Building
 
