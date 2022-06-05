@@ -28,6 +28,12 @@ int main(int argc, char *argv[])
 		exit(EXIT_FAILURE);
 	}
 
+	if(argc == 1) /* -s when no args */
+	{
+		puts(u.sysname);
+		exit(EXIT_SUCCESS);
+	}
+
 	while((optc = getopt_long(argc, argv, "ahmnrsvV", long_options, NULL)) != EOF)
 	{
 		switch(optc)
