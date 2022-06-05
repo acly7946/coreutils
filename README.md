@@ -1,5 +1,5 @@
 # Coreutils
-Some of the core unix utilities
+An implementation of the core unix utilities. This project does not aim to be GNU compatible. It is written for learning purposes and is not intended for daily use.
 
 | Utility | Not started | In Progress | Working |
 | ------- | :---------: | :---------: | :-----: |
