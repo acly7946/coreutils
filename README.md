@@ -6,7 +6,7 @@ Some of the core unix utilities
 | cut     | &check; |         |         |
 | ls      | &check; |         |         |
 | uname   |         | &check; |         |
-| yes     | &check; |         |         |
+| yes     |         | &check; |         |
 
 ## Building
 
