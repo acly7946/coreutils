@@ -1,6 +1,6 @@
-# TEMPLATE(1) completion
+# uname(1) completion
 
-_TEMPLATE()
+_uname()
 {
 	local cur prev short long
 	_get_comp_words_by_ref cur prev
@@ -34,4 +34,4 @@ _TEMPLATE()
 	fi
 
 } &&
-complete -F _TEMPLATE TEMPLATE
+complete -F _uname uname

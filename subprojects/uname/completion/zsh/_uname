@@ -1,9 +1,9 @@
-#compdef TEMPLATE
+#compdef uname
 # -----------
 # Description
 # -----------
 #
-# Completion script for TEMPLATE
+# Completion script for uname
 #
 # ---------------------------------------------
 # Author

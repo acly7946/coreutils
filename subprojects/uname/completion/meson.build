@@ -4,7 +4,7 @@ fish_comp = dependency('fish', required: false)
 # Install bash completions
 if get_option('bash-completions')
 	bash_files = files(
-		'bash/TEMPLATE.bash',
+		'bash/uname.bash',
 	)
 
 	if bash_comp.found()
@@ -22,7 +22,7 @@ endif
 # Install fish completions
 if get_option('fish-completions')
 	fish_files = files(
-		'fish/TEMPLATE.fish',
+		'fish/uname.fish',
 	)
 
 	if fish_comp.found()
@@ -40,7 +40,7 @@ endif
 # Install zsh completions
 if get_option('zsh-completions')
 	zsh_files = files(
-		'zsh/_TEMPLATE',
+		'zsh/_uname',
 	)
 	zsh_install_dir = join_paths(datadir, 'zsh', 'site-functions')
 
