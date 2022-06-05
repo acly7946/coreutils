@@ -1,5 +1,4 @@
 #include <getopt.h>
-#include <stdbool.h>
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -27,21 +26,18 @@ int main(int argc, char *argv[])
 		}
 	}
 
-	if(argc > optind)
+	if(argc > 1)
 	{
-		while(true)
+		while(puts(argv[1]) != EOF)
 		{
-			puts(argv[optind]);
 		}
 	}
 	else
 	{
-		while(true)
+		while(puts("y") != EOF)
 		{
-			puts("y");
 		}
 	}
-
 
 	return EXIT_SUCCESS;
 }
