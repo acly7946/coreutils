@@ -84,13 +84,13 @@ static void usage(void)
 	fprintf(stderr,
 			"Usage: %s [-hV]\n"
 			"\n"
-			"  -a, --all	         Print all information\n"
-			"  -m, --machine	     Print machine name\n"
-			"  -n, --nodename	     Print node name\n"
-			"  -r, --kernel-release	 Print kernel release\n"
-			"  -s, --kernel-name	 Print kernel name\n"
-			"  -v, --kernel-version	 Print kernel version\n"
-			"  -h, --help	         Show help message and quit\n"
+			"  -a, --all             Print all information\n"
+			"  -m, --machine         Print machine name\n"
+			"  -n, --nodename        Print node name\n"
+			"  -r, --kernel-release  Print kernel release\n"
+			"  -s, --kernel-name     Print kernel name\n"
+			"  -v, --kernel-version  Print kernel version\n"
+			"  -h, --help            Show help message and quit\n"
 			"  -V, --version         Show version number and quit\n",
 			NAME);
 	exit(EXIT_FAILURE);
