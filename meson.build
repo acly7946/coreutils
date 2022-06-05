@@ -1,5 +1,5 @@
 project(
-	'TEMPLATE',
+	'Coreutils',
 	'c',
 	version: '0.0.0',
 	license: 'MIT',
@@ -15,9 +15,6 @@ add_project_arguments(
 	[
 		'-Wundef',
 		'-Wvla',
-		'-DNAME="@0@"'.format(meson.project_name()),
-		'-DVERSION="@0@"'.format(meson.project_version()),
-		'-DLICENSE="@0@"'.format(meson.project_license()[0]),
 	],
 	language: 'c'
 )
@@ -25,7 +22,6 @@ add_project_arguments(
 datadir = get_option('datadir')
 sysconfdir = get_option('sysconfdir')
 prefix = get_option('prefix')
-incdir = include_directories('include')
 
 summary({
 	'bash-completions': get_option('bash-completions'),
@@ -34,7 +30,4 @@ summary({
 	'man-pages': get_option('man-pages'),
 }, bool_yn: true)
 
-subdir('completion')
-subdir('doc')
-subdir('src')
-subdir('test')
+subproject('uname')
