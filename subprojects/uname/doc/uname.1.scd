@@ -9,7 +9,6 @@ uname - print system information
 
 # OPTIONS
 
-
 *-a*, *--all*
 	Print all information, in the order -mnrsv
 
