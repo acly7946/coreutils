@@ -49,7 +49,7 @@ int main(int argc, char *argv[])
 static void usage(void)
 {
 	fprintf(stderr,
-			"Usage: %s [-hV]\n"
+			"Usage: %s [STRING] [-hV]\n"
 			"\n"
 			"  -h, --help     Show help message and quit\n"
 			"  -V, --version  Show version number and quit\n",
