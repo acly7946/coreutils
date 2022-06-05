@@ -88,7 +88,7 @@ int main(int argc, char *argv[])
 static void usage(void)
 {
 	fprintf(stderr,
-			"Usage: %s [-hV]\n"
+			"Usage: %s [-ahmnrsvV]\n"
 			"\n"
 			"  -a, --all             Print all information\n"
 			"  -m, --machine         Print machine name\n"
