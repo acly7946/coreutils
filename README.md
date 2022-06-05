@@ -1,7 +1,11 @@
-# C-Console-Template
-A template repo for console programs written in C.
+# Coreutils
+Some of the core unix utilities
 
-## Installation
+| Utility |  TODO   |   WIP   |  DONE   |
+| ------- | ------- | ------- | ------- |
+| uname   | &check; |         |         |
+
+## Building
 
 Dependencies:
 * C compiler \*
@@ -11,12 +15,16 @@ Dependencies:
 
 _\* Compile-time dep_
 
-Compilation:
 ``` sh
-git clone ""
-cd directory/
+# Copy using button here →
+git clone "https://github.com/acly7946/coreutils.git"
+cd coreutils/
 meson build/
 ninja -C build/
+```
+``` sh
 sudo ninja -C build/ install # To install
+```
+``` sh
 sudo ninja -C build/ uninstall # To uninstall
 ```
