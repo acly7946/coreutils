@@ -27,10 +27,21 @@ int main(int argc, char *argv[])
 		}
 	}
 
-	while(true)
+	if(argc > optind)
 	{
-		printf(argv[argc]);
+		while(true)
+		{
+			puts(argv[optind]);
+		}
 	}
+	else
+	{
+		while(true)
+		{
+			puts("y");
+		}
+	}
+
 
 	return EXIT_SUCCESS;
 }
