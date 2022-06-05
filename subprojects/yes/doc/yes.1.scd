@@ -5,7 +5,7 @@ yes(1)
 yes - output 'y' or specified string repeatedly until killed
 
 # SYNOPSIS
-*yes* [STRING]
+*yes* [STRING] ++
 *yes* [OPTIONS]
 
 # OPTIONS
