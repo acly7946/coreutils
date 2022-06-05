@@ -11,4 +11,4 @@ add_test_setup('valgrind',
 	timeout_multiplier: 10
 )
 
-test('Valgrind memcheck (uname)', uname, suite: 'valgrind')
+test('Valgrind memcheck (yes)', yes, suite: 'valgrind')
