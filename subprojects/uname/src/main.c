@@ -47,7 +47,6 @@ int main(int argc, char *argv[])
 						u.machine
 				);
 				exit(EXIT_SUCCESS);
-				break;
 
 			case 'm':
 				fputs(u.machine, stdout);
