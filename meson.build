@@ -27,4 +27,5 @@ summary({
 }, bool_yn: true)
 
 subproject('uname')
+subproject('uptime')
 subproject('yes')
