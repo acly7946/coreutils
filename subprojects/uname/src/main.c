@@ -50,22 +50,27 @@ int main(int argc, char *argv[])
 
 			case 'm':
 				fputs(u.machine, stdout);
+				u.machine[0] = '\0';
 				break;
 
 			case 'n':
 				fputs(u.nodename, stdout);
+				u.nodename[0] = '\0';
 				break;
 
 			case 'r':
 				fputs(u.release, stdout);
+				u.release[0] = '\0';
 				break;
 
 			case 's':
 				fputs(u.sysname, stdout);
+				u.sysname[0] = '\0';
 				break;
 
 			case 'v':
 				fputs(u.version, stdout);
+				u.version[0] = '\0';
 				break;
 
 			case 'V':
