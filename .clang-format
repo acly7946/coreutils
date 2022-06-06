@@ -5,7 +5,7 @@ AlignConsecutiveAssignments: 'false'
 AlignConsecutiveDeclarations: 'false'
 AlignTrailingComments: 'false'
 AllowShortBlocksOnASingleLine: Never
-AllowShortCaseLabelsOnASingleLine: 'false'
+AllowShortCaseLabelsOnASingleLine: 'true'
 AllowShortIfStatementsOnASingleLine: Never
 AllowShortLoopsOnASingleLine: 'false'
 BreakBeforeBraces: Custom
