@@ -24,7 +24,7 @@ int main(int argc, char *argv[])
 
 	if(uname(&u) == -1)
 	{
-		perror("uname: ");
+		perror("uname");
 		exit(EXIT_FAILURE);
 	}
 
