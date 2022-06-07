@@ -12,9 +12,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-
-      - name: Meson configure
-        run: meson build/
-     
-      - name: Ninja build
-        run:  ninja -C build/
+      - uses: BSFishy/meson-build@v1.0.3
+        with:
+          action: test
