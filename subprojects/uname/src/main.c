@@ -92,7 +92,7 @@ int main(int argc, char *argv[])
 static void usage(void)
 {
 	fprintf(stderr,
-			"Usage: %s [-ahmnrsvV]\n"
+			"Usage: uname [-ahmnrsvV]\n"
 			"\n"
 			"  -a, --all             Print all information\n"
 			"  -m, --machine         Print machine name\n"
@@ -101,13 +101,12 @@ static void usage(void)
 			"  -s, --kernel-name     Print kernel name\n"
 			"  -v, --kernel-version  Print kernel version\n"
 			"  -h, --help            Show help message and quit\n"
-			"  -V, --version         Show version number and quit\n",
-			NAME);
+			"  -V, --version         Show version number and quit\n");
 	exit(EXIT_FAILURE);
 }
 
 static void version(void)
 {
-	printf("%s %s (%s License)\n", NAME, VERSION, LICENSE);
+	printf("uname %s (%s License)\n", VERSION, LICENSE);
 	exit(EXIT_SUCCESS);
 }

@@ -45,16 +45,15 @@ int main(int argc, char *argv[])
 static void usage(void)
 {
 	fprintf(stderr,
-			"Usage: %s [STRING] [-hV]\n"
+			"Usage: yes [STRING] [-hV]\n"
 			"\n"
 			"  -h, --help     Show help message and quit\n"
-			"  -V, --version  Show version number and quit\n",
-			NAME);
+			"  -V, --version  Show version number and quit\n");
 	exit(EXIT_FAILURE);
 }
 
 static void version(void)
 {
-	printf("%s %s (%s License)\n", NAME, VERSION, LICENSE);
+	printf("yes %s (%s License)\n", VERSION, LICENSE);
 	exit(EXIT_SUCCESS);
 }
