@@ -32,9 +32,6 @@ void uptime_since(long int seconds)
 {
 	time_t t;
 	struct tm *time_since;
-	long int days;
-	int hours;
-	int mins;
 
 	t = time(NULL);
 	t -= seconds;
