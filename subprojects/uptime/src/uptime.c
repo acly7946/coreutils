@@ -6,6 +6,31 @@
 
 void uptime_print(struct sysinfo sys)
 {
+	time_t t;
+	struct tm *time_now;
+	int hours;
+	int mins;
+
+	t = time(NULL);
+	if((time_now = localtime(&t)) == NULL)
+	{
+		perror("Can't get time:");
+		exit(EXIT_FAILURE);
+	}
+
+	hours = (sys.uptime / (60 * 60));
+	mins = (sys.uptime / 60) - (hours * 60);
+
+	printf(" %02d:%02d:%02d up  %d:%02d,  %d user,  load average: %.2f, %.2f, %.2f\n",
+			time_now->tm_hour,
+			time_now->tm_min,
+			time_now->tm_sec,
+			hours,
+			mins,
+			1,
+			sys.loads[0]/65536.0,
+			sys.loads[1]/65536.0,
+			sys.loads[2]/65536.0);
 }
 
 void uptime_pretty(long int seconds)
