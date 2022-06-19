@@ -20,11 +20,21 @@ void uptime_pretty(long int seconds)
 
 	if(days > 0)
 	{
-		printf("up %ld days, %d hours, %d minutes\n", days, hours, mins);
+		printf("up %ld day%s, %d hour%s, %d minute%s\n",
+				days,
+				days == 1 ? "" : "s",
+				hours,
+				hours == 1 ? "" : "s",
+				mins,
+				mins == 1 ? "" : "s");
 	}
 	else
 	{
-		printf("up %d hours, %d minutes\n", hours, mins);
+		printf("up %d hour%s, %d minute%s\n",
+				hours,
+				hours == 1 ? "" : "s",
+				mins,
+				mins == 1 ? "" : "s");
 	}
 }
 
