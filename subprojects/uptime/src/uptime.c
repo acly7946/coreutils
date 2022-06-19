@@ -2,20 +2,38 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
+#include <utmp.h>
 #include <sys/sysinfo.h>
 
 void uptime_print(struct sysinfo sys)
 {
 	time_t t;
 	struct tm *time_now;
+	struct utmp *ut;
+	int users;
 	int hours;
 	int mins;
 
 	t = time(NULL);
+	users = 0;
 	if((time_now = localtime(&t)) == NULL)
 	{
-		perror("Can't get time:");
+		perror("Can't get time");
 		exit(EXIT_FAILURE);
+	}
+	if((ut = getutent()) == NULL)
+	{
+		perror("Can't get users");
+		exit(EXIT_FAILURE);
+	}
+
+	while(ut)
+	{
+		if(ut->ut_type == USER_PROCESS)
+		{
+			users++;
+		}
+		ut = getutent();
 	}
 
 	hours = (sys.uptime / (60 * 60));
@@ -27,7 +45,7 @@ void uptime_print(struct sysinfo sys)
 			time_now->tm_sec,
 			hours,
 			mins,
-			1,
+			users,
 			sys.loads[0]/65536.0,
 			sys.loads[1]/65536.0,
 			sys.loads[2]/65536.0);
