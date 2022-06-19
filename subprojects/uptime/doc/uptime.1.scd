@@ -9,6 +9,12 @@ uptime - output system uptime
 
 # OPTIONS
 
+*-p*, *--pretty*
+	Print in a human-readable format
+
+*-s*, *--since*
+	Print time uptime is calculated from
+
 *-h*, *--help*
 	Show help message and quit
 
