@@ -12,3 +12,5 @@ add_test_setup('valgrind',
 )
 
 test('Valgrind memcheck (uptime)', uptime, suite: 'valgrind')
+test('Valgrind memcheck (uptime -p)', uptime, args: ['-p'], suite: 'valgrind')
+test('Valgrind memcheck (uptime -s)', uptime, args: ['-s'], suite: 'valgrind')
