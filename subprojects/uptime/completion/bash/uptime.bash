@@ -6,11 +6,15 @@ _uptime()
 	_get_comp_words_by_ref cur
 
 	short=(
+		-p
+		-s
 		-h
 		-V
 	)
 
 	long=(
+		--pretty
+		--since
 		--help
 		--version
 	)
@@ -27,4 +31,4 @@ _uptime()
 	fi
 
 } &&
-complete -F _uptime uname
+complete -F _uptime uptime
