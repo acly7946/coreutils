@@ -1,5 +1,4 @@
 #include <getopt.h>
-#include <stdbool.h>
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -8,7 +7,6 @@ static void version(void) __attribute__((noreturn));
 
 int main(int argc, char *argv[])
 {
-	int i;
 	int optc;
 	static struct option long_options[] =
 	{
@@ -28,23 +26,19 @@ int main(int argc, char *argv[])
 		}
 	}
 
-	if(argc > 1)
+	/* string is specified */
+	while(argc > 1)
 	{
-		while(true)
+		for(int i = 1; i < argc; i++)
 		{
-			for(i = 1; i < argc; i++)
-			{
-				printf("%s ", argv[i]);
-			}
-			putchar('\n');
+			printf("%s ", argv[i]);
 		}
+		putchar('\n');
 	}
-	else
+
+	while(argc == 1)
 	{
-		while(true)
-		{
-			puts("y");
-		}
+		puts("y");
 	}
 
 	return EXIT_SUCCESS;
