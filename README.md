@@ -17,12 +17,13 @@ An implementation of the core unix utilities. This project does not aim to be GN
 ## Building
 
 Dependencies:
+
 * GCC/Clang \*
 * meson (>=0.59.0) \*
 * ninja \*
-* scdoc (optional: man pages)\*
+* scdoc (optional: man pages) \*
 
-_\* Compile-time dep_
+	_\* Compile-time dependency_
 
 ``` sh
 # Copy using button there -->
@@ -36,4 +37,11 @@ sudo ninja -C build/ install # To install
 ```
 ``` sh
 sudo ninja -C build/ uninstall # To uninstall
+```
+
+Alternatively, each utility can be built on it's own
+``` sh
+cd uptime/
+meson build/
+ninja -C build/
 ```
