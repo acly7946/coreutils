@@ -39,7 +39,7 @@ void uptime_print(struct sysinfo sys)
 	hours = (sys.uptime / (60 * 60));
 	mins = (sys.uptime / 60) - (hours * 60);
 
-	printf(" %02d:%02d:%02d up  %d:%02d,  %d user,  load average: %.2f, %.2f, %.2f\n",
+	printf(" %02d:%02d:%02d up %d:%02d,  %d user,  load average: %.2f, %.2f, %.2f\n",
 			time_now->tm_hour,
 			time_now->tm_min,
 			time_now->tm_sec,
