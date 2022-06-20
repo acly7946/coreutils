@@ -21,7 +21,7 @@ int main(int argc, char *argv[])
 
 	if(sysinfo(&sys) != 0)
 	{
-		perror("Can't get sysinfo");
+		perror("uptime(main.c): Can't get sysinfo");
 		exit(EXIT_FAILURE);
 	}
 

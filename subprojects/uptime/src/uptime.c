@@ -18,12 +18,12 @@ void uptime_print(struct sysinfo sys)
 	users = 0;
 	if((time_now = localtime(&t)) == NULL)
 	{
-		perror("Can't get time");
+		perror("uptime(uptime.c): Can't get time");
 		exit(EXIT_FAILURE);
 	}
 	if((ut = getutent()) == NULL)
 	{
-		perror("Can't get users");
+		perror("uptime(uptime.c): Can't get users");
 		exit(EXIT_FAILURE);
 	}
 
@@ -90,7 +90,7 @@ void uptime_since(long int seconds)
 	t -= seconds;
 	if((time_since = localtime(&t)) == NULL)
 	{
-		perror("Can't get time");
+		perror("uptime(uptime.c): Can't get time");
 		exit(EXIT_FAILURE);
 	}
 
