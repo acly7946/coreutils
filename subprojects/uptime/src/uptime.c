@@ -8,11 +8,11 @@
 void uptime_print(struct sysinfo sys)
 {
 	time_t t;
-	struct tm *time_now;
-	struct utmp *ut;
 	int users;
 	int hours;
 	int mins;
+	struct tm *time_now;
+	struct utmp *ut;
 
 	t = time(NULL);
 	users = 0;
@@ -36,7 +36,7 @@ void uptime_print(struct sysinfo sys)
 		ut = getutent();
 	}
 
-	hours = (sys.uptime / (60 * 60));
+	hours = sys.uptime / (60 * 60);
 	mins = (sys.uptime / 60) - (hours * 60);
 
 	printf(" %02d:%02d:%02d up %d:%02d,  %d user,  load average: %.2f, %.2f, %.2f\n",
@@ -90,13 +90,13 @@ void uptime_since(long int seconds)
 	t -= seconds;
 	if((time_since = localtime(&t)) == NULL)
 	{
-		perror("Can't get time:");
+		perror("Can't get time");
 		exit(EXIT_FAILURE);
 	}
 
 	printf("%04d-%02d-%02d %02d:%02d:%02d\n",
-			time_since->tm_year+1900,
-			time_since->tm_mon+1,
+			time_since->tm_year + 1900,
+			time_since->tm_mon + 1,
 			time_since->tm_mday,
 			time_since->tm_hour,
 			time_since->tm_min,
