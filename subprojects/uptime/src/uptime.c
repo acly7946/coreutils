@@ -8,9 +8,10 @@
 void uptime_print(struct sysinfo sys)
 {
 	time_t t;
-	int users;
+	long int days;
 	int hours;
 	int mins;
+	int users;
 	struct tm *time_now;
 	struct utmp *ut;
 
@@ -36,19 +37,40 @@ void uptime_print(struct sysinfo sys)
 		ut = getutent();
 	}
 
-	hours = sys.uptime / (60 * 60);
-	mins = (sys.uptime / 60) - (hours * 60);
+	days = sys.uptime / (24 * 60 * 60);
+	hours = (sys.uptime / (60 * 60)) - (days * 24);
+	mins = (sys.uptime / 60) - (days * 24 * 60) - (hours * 60);
 
-	printf(" %02d:%02d:%02d up %d:%02d,  %d user,  load average: %.2f, %.2f, %.2f\n",
-			time_now->tm_hour,
-			time_now->tm_min,
-			time_now->tm_sec,
-			hours,
-			mins,
-			users,
-			sys.loads[0]/65536.0,
-			sys.loads[1]/65536.0,
-			sys.loads[2]/65536.0);
+	if(days > 0)
+	{
+		printf(" %02d:%02d:%02d up %ld day%s,  %d:%02d,  %d user,  load average: %.2f, %.2f, %.2f\n",
+				time_now->tm_hour,
+				time_now->tm_min,
+				time_now->tm_sec,
+				days,
+				days == 1 ? "" : "s",
+				hours,
+				mins,
+				users,
+				sys.loads[0]/65536.0,
+				sys.loads[1]/65536.0,
+				sys.loads[2]/65536.0);
+	}
+	else
+	{
+		printf(" %02d:%02d:%02d up  %d:%02d,  %d user,  load average: %.2f, %.2f, %.2f\n",
+				time_now->tm_hour,
+				time_now->tm_min,
+				time_now->tm_sec,
+				hours,
+				mins,
+				users,
+				sys.loads[0]/65536.0,
+				sys.loads[1]/65536.0,
+				sys.loads[2]/65536.0);
+	}
+
+
 }
 
 void uptime_pretty(long int seconds)
