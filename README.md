@@ -8,6 +8,7 @@ An implementation of the core unix utilities. This project does not aim to be GN
 | ------- | :---------: | :---------: | :-----: |
 | cut     |   &check;   |             |         |
 | ls      |   &check;   |             |         |
+| mkdir   |             |   &check;   |         |
 | uname   |             |   &check;   |         |
 | uptime  |             |             | &check; |
 | yes     |             |             | &check; |
