@@ -27,4 +27,4 @@ _yes()
 	fi
 
 } &&
-complete -F _yes uname
+complete -F _yes yes
