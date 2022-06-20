@@ -54,6 +54,6 @@ static void usage(void)
 
 static void version(void)
 {
-	printf("yes %s (%s License)\n", VERSION, LICENSE);
+	printf("yes %s, acly7946 coreutils\n", VERSION);
 	exit(EXIT_SUCCESS);
 }

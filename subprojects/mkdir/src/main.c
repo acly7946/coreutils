@@ -75,6 +75,6 @@ static void usage(void)
 
 static void version(void)
 {
-	printf("mkdir %s (%s License)\n", VERSION, LICENSE);
+	printf("mkdir %s, acly7946 coreutils\n", VERSION);
 	exit(EXIT_SUCCESS);
 }
