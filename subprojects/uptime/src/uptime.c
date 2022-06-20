@@ -59,7 +59,7 @@ void uptime_pretty(long int seconds)
 
 	days = seconds / (24 * 60 * 60);
 	hours = (seconds / (60 * 60)) - (days * 24);
-	mins = (seconds / 60) - (hours * 60);
+	mins = (seconds / 60) - (days * 24 * 60) - (hours * 60);
 
 	if(days > 0)
 	{
