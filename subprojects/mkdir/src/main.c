@@ -11,6 +11,7 @@ int main(int argc, char *argv[])
 {
 	int optc;
 	bool flag_p;
+	__mode_t mode;
 	struct stat st;
 	static struct option long_options[] =
 	{
@@ -19,6 +20,9 @@ int main(int argc, char *argv[])
 		{"parent", no_argument, NULL, 'p'},
 		{"version", no_argument, NULL, 'V'},
 	};
+
+	/* Default mode */
+	mode = 0777 & ~umask(0);
 
 	while((optc = getopt_long(argc, argv, "hmpV", long_options, NULL)) != EOF)
 	{
@@ -48,7 +52,10 @@ int main(int argc, char *argv[])
 	/* for each non-option arg */
 	for(argc -= optind; argc > 0; argc--)
 	{
-		mkdir(argv[argc], 0755);
+		if((mkdir(argv[argc], mode)) == -1)
+		{
+			perror("mkdir(main.c)");
+		}
 	}
 
 	return EXIT_SUCCESS;
