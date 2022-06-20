@@ -38,7 +38,7 @@ sudo ninja -C build/ install # To install
 sudo ninja -C build/ uninstall # To uninstall
 ```
 
-Alternatively, each utility can be build on it's own
+Alternatively, each utility can be built on it's own
 ``` sh
 cd uptime/
 meson build/
