@@ -1,7 +1,7 @@
 project(
 	'Coreutils',
 	'c',
-	version: '0.4.4',
+	version: '0.4.5',
 	license: 'MIT',
 	meson_version: '>=0.59.0',
 )

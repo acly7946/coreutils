@@ -93,7 +93,7 @@ void uptime_pretty(long int seconds)
 				mins,
 				mins == 1 ? "" : "s");
 	}
-	else
+	else if(hours > 0)
 	{
 		printf("up %d hour%s, %d minute%s\n",
 				hours,
@@ -101,6 +101,13 @@ void uptime_pretty(long int seconds)
 				mins,
 				mins == 1 ? "" : "s");
 	}
+	else
+	{
+		printf("up %d minute%s\n",
+				mins,
+				mins == 1 ? "" : "s");
+	}
+
 }
 
 void uptime_since(long int seconds)
