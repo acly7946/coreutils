@@ -6,7 +6,6 @@ An implementation of the core unix utilities. This project does not aim to be GN
 
 |  Utility  | Not started | In Progress | Working |
 | --------- | :---------: | :---------: | :-----: |
-| alias     |   &check;   |             |         |
 | ar        |   &check;   |             |         |
 | at        |   &check;   |             |         |
 | awk       |   &check;   |             |         |
@@ -91,7 +90,6 @@ An implementation of the core unix utilities. This project does not aim to be GN
 | tail      |   &check;   |             |         |
 | tee       |   &check;   |             |         |
 | test      |   &check;   |             |         |
-| time      |   &check;   |             |         |
 | touch     |   &check;   |             |         |
 | tput      |   &check;   |             |         |
 | tr        |   &check;   |             |         |
