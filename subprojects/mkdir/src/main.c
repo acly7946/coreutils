@@ -64,7 +64,7 @@ int main(int argc, char *argv[])
 static void usage(void)
 {
 	fprintf(stderr,
-			"Usage: mkdir [-hmpV]\n"
+			"Usage: mkdir [-hmpV] <DIRECTORY1> [DIRECTORY2]...\n"
 			"\n"
 			"  -h, --help     Show help message and quit\n"
 			"  -m, --mode     Set permissions for new directory\n"
