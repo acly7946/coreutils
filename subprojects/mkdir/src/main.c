@@ -1,7 +1,10 @@
+#include "mkpath.h"
 #include <getopt.h>
+#include <errno.h>
 #include <stdbool.h>
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 #include <sys/stat.h>
 
 static void usage(void) __attribute__((noreturn));
@@ -10,6 +13,7 @@ static void version(void) __attribute__((noreturn));
 int main(int argc, char *argv[])
 {
 	int optc;
+	int rv;
 	bool flag_p;
 	__mode_t mode;
 	struct stat st;
@@ -21,8 +25,8 @@ int main(int argc, char *argv[])
 		{"version", no_argument, NULL, 'V'},
 	};
 
-	/* Default mode */
-	mode = 0777 & ~umask(0);
+	flag_p = false;
+	mode = 0777 & ~umask(0); /* Default mode */
 
 	while((optc = getopt_long(argc, argv, "hmpV", long_options, NULL)) != EOF)
 	{
@@ -49,10 +53,21 @@ int main(int argc, char *argv[])
 		exit(EXIT_FAILURE);
 	}
 
+	argc -= optind;
+	argv += optind;
+
 	/* for each non-option arg */
-	for(argc -= optind; argc > 0; argc--)
+	for(; *argv != NULL; ++argv)
 	{
-		if((mkdir(argv[argc], mode)) == -1)
+		if(flag_p)
+		{
+			rv = mkpath(*argv, mode);
+		}
+		else
+		{
+			rv = mkdir(*argv, mode);
+		}
+		if(rv == -1)
 		{
 			perror("mkdir(main.c)");
 		}

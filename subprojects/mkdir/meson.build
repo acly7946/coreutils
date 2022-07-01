@@ -1,7 +1,7 @@
 project(
 	'mkdir',
 	'c',
-	version: '0.0.1',
+	version: '0.1.0',
 	license: 'MIT',
 	meson_version: '>=0.59.0',
 	default_options:
@@ -23,6 +23,7 @@ add_project_arguments(
 datadir = get_option('datadir')
 sysconfdir = get_option('sysconfdir')
 prefix = get_option('prefix')
+incdir = include_directories('include')
 
 subdir('completion')
 subdir('doc')
