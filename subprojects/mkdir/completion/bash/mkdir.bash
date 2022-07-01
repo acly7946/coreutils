@@ -1,16 +1,20 @@
-# yes(1) completion
+# mkdir(1) completion
 
-_yes()
+_mkdir()
 {
 	local cur short long
 	_get_comp_words_by_ref cur
 
 	short=(
+		-m
+		-p
 		-h
 		-V
 	)
 
 	long=(
+		--mode
+		--parent
 		--help
 		--version
 	)
@@ -27,4 +31,4 @@ _yes()
 	fi
 
 } &&
-complete -F _yes uname
+complete -F _mkdir mkdir
