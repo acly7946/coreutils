@@ -22,7 +22,7 @@ int main(int argc, char *argv[])
 		{"version", no_argument, NULL, 'V'},
 	};
 
-	while((optc = getopt_long(argc, argv, "hVz", long_options, NULL)) != EOF)
+	while((optc = getopt_long(argc, argv, "ashVz", long_options, NULL)) != EOF)
 	{
 		switch(optc)
 		{
@@ -45,6 +45,16 @@ int main(int argc, char *argv[])
 				usage();
 		}
 	}
+
+	do
+	{
+		fputs(basename(argv[optind]), stdout);
+		if(!flag_z)
+		{
+			putchar('\n');
+		}
+		optind++;
+	}	while((flag_a) && (optind < argc));
 
 	return EXIT_SUCCESS;
 }
