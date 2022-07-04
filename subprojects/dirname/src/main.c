@@ -1,4 +1,6 @@
 #include <getopt.h>
+#include <libgen.h>
+#include <stdbool.h>
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -8,22 +10,37 @@ static void version(void) __attribute__((noreturn));
 int main(int argc, char *argv[])
 {
 	int optc;
+	bool flag_z;
 	static struct option long_options[] =
 	{
+		{"zero", no_argument, NULL, 'z'},
 		{"help", no_argument, NULL, 'h'},
 		{"version", no_argument, NULL, 'V'},
 	};
 
-	while((optc = getopt_long(argc, argv, "hV", long_options, NULL)) != EOF)
+	while((optc = getopt_long(argc, argv, "hVz", long_options, NULL)) != EOF)
 	{
 		switch(optc)
 		{
+			case 'z':
+				flag_z = true;
+				break;
+
 			case 'V':
 				version();
 
 			default:
 				usage();
 		}
+	}
+
+	for(int i = 1; i < argc; i++)
+	{
+		puts(dirname(argv[i]));
+	}
+	if(((argc - optind) > 1) && !(flag_z))
+	{
+		putchar('\n');
 	}
 
 	return EXIT_SUCCESS;
