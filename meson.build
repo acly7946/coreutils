@@ -13,6 +13,7 @@ summary({
 	'man-pages': get_option('man-pages'),
 }, bool_yn: true)
 
+subproject('dirname')
 subproject('mkdir')
 subproject('uname')
 subproject('uptime')
