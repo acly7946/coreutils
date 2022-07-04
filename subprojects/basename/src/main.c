@@ -48,11 +48,7 @@ int main(int argc, char *argv[])
 
 	do
 	{
-		fputs(basename(argv[optind]), stdout);
-		if(!flag_z)
-		{
-			putchar('\n');
-		}
+		printf("%s%s", basename(argv[optind]), flag_z ? "" : "\n");
 		optind++;
 	}	while((flag_a) && (optind < argc));
 
