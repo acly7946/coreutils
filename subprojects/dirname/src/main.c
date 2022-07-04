@@ -10,7 +10,7 @@ static void version(void) __attribute__((noreturn));
 int main(int argc, char *argv[])
 {
 	int optc;
-	bool flag_z;
+	bool flag_z = false;
 	static struct option long_options[] =
 	{
 		{"zero", no_argument, NULL, 'z'},
@@ -37,7 +37,7 @@ int main(int argc, char *argv[])
 	for(; optind < argc; optind++)
 	{
 		fputs(dirname(argv[optind]), stdout);
-		if(((argc - optind) > 1) && !(flag_z))
+		if(!flag_z)
 		{
 			putchar('\n');
 		}
