@@ -2,12 +2,15 @@ dirname(1)
 
 # NAME
 
-dirname -
+dirname - output directory name from specified path
 
 # SYNOPSIS
-*dirname* [OPTIONS]
+*dirname* [OPTIONS] <PATH1> [PATH2]...
 
 # OPTIONS
+
+*-z*, *--zero*
+	Do not print newline after each result
 
 *-h*, *--help*
 	Show help message and quit
