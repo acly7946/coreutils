@@ -6,11 +6,13 @@ _dirname()
 	_get_comp_words_by_ref cur
 
 	short=(
+		-z
 		-h
 		-V
 	)
 
 	long=(
+		--zero
 		--help
 		--version
 	)
