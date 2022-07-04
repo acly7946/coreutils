@@ -26,21 +26,6 @@ int main(int argc, char *argv[])
 		}
 	}
 
-	/* string is specified */
-	while(argc > 1)
-	{
-		for(int i = 1; i < argc; i++)
-		{
-			printf("%s ", argv[i]);
-		}
-		putchar('\n');
-	}
-
-	while(argc == 1)
-	{
-		puts("y");
-	}
-
 	return EXIT_SUCCESS;
 }
 
