@@ -34,13 +34,13 @@ int main(int argc, char *argv[])
 		}
 	}
 
-	for(int i = 1; i < argc; i++)
+	for(; optind < argc; optind++)
 	{
-		puts(dirname(argv[i]));
-	}
-	if(((argc - optind) > 1) && !(flag_z))
-	{
-		putchar('\n');
+		fputs(dirname(argv[optind]), stdout);
+		if(((argc - optind) > 1) && !(flag_z))
+		{
+			putchar('\n');
+		}
 	}
 
 	return EXIT_SUCCESS;
