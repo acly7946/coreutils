@@ -49,10 +49,11 @@ int main(int argc, char *argv[])
 static void usage(void)
 {
 	fprintf(stderr,
-			"Usage: dirname [STRING] [-hV]\n"
+			"Usage: dirname [-hVz] <PATH1> [PATH2]...\n"
 			"\n"
 			"  -h, --help     Show help message and quit\n"
-			"  -V, --version  Show version number and quit\n");
+			"  -V, --version  Show version number and quit\n"
+			"  -z, --zero     Do not print newline after each result\n");
 	exit(EXIT_FAILURE);
 }
 
