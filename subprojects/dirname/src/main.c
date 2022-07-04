@@ -36,11 +36,7 @@ int main(int argc, char *argv[])
 
 	for(; optind < argc; optind++)
 	{
-		fputs(dirname(argv[optind]), stdout);
-		if(!flag_z)
-		{
-			putchar('\n');
-		}
+		printf("%s%s", dirname(argv[optind]), flag_z ? "" : "\n");
 	}
 
 	return EXIT_SUCCESS;
