@@ -62,11 +62,13 @@ int main(int argc, char *argv[])
 static void usage(void)
 {
 	fprintf(stderr,
-			"Usage: basename [-hVz] <PATH1> [PATH2]...\n"
+			"Usage: basename [-ashVz] <PATH1> [PATH2]...\n"
 			"\n"
-			"  -h, --help     Show help message and quit\n"
-			"  -V, --version  Show version number and quit\n"
-			"  -z, --zero     Do not print newline after each result\n");
+			"  -a, --multiple  Support multiple arguments\n"
+			"  -s, --suffix    Remove trailing suffix\n"
+			"  -h, --help      Show help message and quit\n"
+			"  -V, --version   Show version number and quit\n"
+			"  -z, --zero      Do not print newline after each result\n");
 	exit(EXIT_FAILURE);
 }
 
