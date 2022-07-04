@@ -1,5 +1,5 @@
-dirname = executable(
-	'dirname',
+basename = executable(
+	'basename',
 	'main.c',
 	install: true
 )

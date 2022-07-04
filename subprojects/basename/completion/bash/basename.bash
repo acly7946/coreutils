@@ -1,6 +1,6 @@
-# dirname(1) completion
+# basename(1) completion
 
-_dirname()
+_basename()
 {
 	local cur short long
 	_get_comp_words_by_ref cur
@@ -29,4 +29,4 @@ _dirname()
 	fi
 
 } &&
-complete -F _dirname dirname
+complete -F _basename basename

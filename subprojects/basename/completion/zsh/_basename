@@ -1,9 +1,9 @@
-#compdef dirname
+#compdef basename
 # -----------
 # Description
 # -----------
 #
-# Completion script for dirname
+# Completion script for basename
 #
 # ---------------------------------------------
 # Author

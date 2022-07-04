@@ -10,9 +10,13 @@ static void version(void) __attribute__((noreturn));
 int main(int argc, char *argv[])
 {
 	int optc;
+	bool flag_a = false;
+	bool flag_s = false;
 	bool flag_z = false;
 	static struct option long_options[] =
 	{
+		{"multiple", no_argument, NULL, 'a'},
+		{"suffix", no_argument, NULL, 's'},
 		{"zero", no_argument, NULL, 'z'},
 		{"help", no_argument, NULL, 'h'},
 		{"version", no_argument, NULL, 'V'},
@@ -22,6 +26,14 @@ int main(int argc, char *argv[])
 	{
 		switch(optc)
 		{
+			case 'a':
+				flag_a = true;
+				break;
+
+			case 's':
+				flag_s = true;
+				break;
+
 			case 'z':
 				flag_z = true;
 				break;
