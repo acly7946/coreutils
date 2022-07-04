@@ -28,7 +28,7 @@ An implementation of the core unix utilities. This project does not aim to be GN
 | dd        |   &check;   |             |         |
 | df        |   &check;   |             |         |
 | diff      |   &check;   |             |         |
-| dirname   |   &check;   |             |         |
+| dirname   |             |             | &check; |
 | du        |   &check;   |             |         |
 | echo      |   &check;   |             |         |
 | ed        |   &check;   |             |         |
