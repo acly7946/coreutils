@@ -3,7 +3,9 @@
 #include <stdbool.h>
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
+char *remove_suffix(char *str, const char *suffix);
 static void usage(void) __attribute__((noreturn));
 static void version(void) __attribute__((noreturn));
 
@@ -48,11 +50,28 @@ int main(int argc, char *argv[])
 
 	do
 	{
-		printf("%s%s", basename(argv[optind]), flag_z ? "" : "\n");
+		printf("%s%c",
+				basename(argv[optind]),
+				flag_z ? 0 : '\n');
 		optind++;
 	}	while((flag_a) && (optind < argc));
 
 	return EXIT_SUCCESS;
+}
+
+char *remove_suffix(char *str, const char *suffix)
+{
+	size_t len = strlen(str);
+	size_t suffix_len = strlen(suffix);
+	if(len < suffix_len)
+	{
+		return str;
+	}
+	if(strcmp(str + len - suffix_len, suffix) == 0)
+	{
+		str[len - suffix_len] = '\0';
+	}
+	return str;
 }
 
 static void usage(void)
