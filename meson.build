@@ -15,6 +15,7 @@ summary({
 
 subproject('dirname')
 subproject('mkdir')
+subproject('tty')
 subproject('uname')
 subproject('uptime')
 subproject('yes')
