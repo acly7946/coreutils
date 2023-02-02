@@ -1,6 +1,7 @@
 #include <getopt.h>
 #include <stdio.h>
 #include <stdlib.h>
+#include <unistd.h>
 
 static void usage(void) __attribute__((noreturn));
 static void version(void) __attribute__((noreturn));
@@ -25,6 +26,8 @@ int main(int argc, char *argv[])
 				usage();
 		}
 	}
+
+	printf("%s\n", ttyname(0));
 
 	return EXIT_SUCCESS;
 }
