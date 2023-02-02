@@ -56,10 +56,10 @@ int main(int argc, char *argv[])
 static void usage(void)
 {
 	fprintf(stderr,
-			"Usage: tty [-hV]\n"
+			"Usage: tty [-hsV]\n"
 			"\n"
 			"  -h, --help     Show help message and quit\n"
-			"  -s, --silent     Show help message and quit\n"
+			"  -s, --silent   Print nothing, only return exit status\n"
 			"  -V, --version  Show version number and quit\n");
 	exit(EXIT_FAILURE);
 }
