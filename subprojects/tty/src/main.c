@@ -40,17 +40,10 @@ int main(int argc, char *argv[])
 
 	if(!flag_s)
 	{
-		if(tty)
-		{
-			puts(tty);
-		}
-		else
-		{
-			puts("not a tty");
-		}
+		puts(tty ? tty : "not a tty");
 	}
 
-	return EXIT_SUCCESS;
+	return tty ? EXIT_SUCCESS : EXIT_FAILURE;
 }
 
 static void usage(void)
