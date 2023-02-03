@@ -95,7 +95,7 @@ An implementation of the core unix utilities. This project does not aim to be GN
 | tr        |   &check;   |             |         |
 | true      |   &check;   |             |         |
 | tsort     |   &check;   |             |         |
-| tty       |             |   &check;   |         |
+| tty       |             |             | &check; |
 | umask     |   &check;   |             |         |
 | unalias   |   &check;   |             |         |
 | uname     |             |   &check;   |         |

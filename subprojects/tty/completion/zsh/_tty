@@ -1,9 +1,9 @@
-#compdef yes
+#compdef tty
 # -----------
 # Description
 # -----------
 #
-# Completion script for yes
+# Completion script for tty
 #
 # ---------------------------------------------
 # Author
@@ -14,5 +14,6 @@
 # -------------------------------
 
 _arguments -s \
+	'(-s --silent)'{-s,--silent}'[Print nothing, only return exit status]' \
 	'(-h --help)'{-h,--help}'[Show help message and quit]'
 	'(-V --version)'{-V,--version}'[Show version number and quit]'
