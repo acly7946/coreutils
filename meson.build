@@ -3,7 +3,7 @@ project(
 	'c',
 	version: '0.6.3',
 	license: 'MIT',
-	meson_version: '>=0.59.0',
+	meson_version: '>=0.53.0',
 )
 
 summary({
