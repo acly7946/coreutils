@@ -7,10 +7,12 @@ _tty()
 
 	short=(
 		-h
+		-s
 		-V
 	)
 
 	long=(
+		--silent
 		--help
 		--version
 	)
