@@ -118,7 +118,7 @@ An implementation of the core unix utilities. This project does not aim to be GN
 Dependencies:
 
 * GCC/Clang \*
-* meson (>=0.59.0) \*
+* meson (>=0.53.0) \*
 * ninja \*
 * scdoc (optional: man pages) \*
 
