@@ -1,7 +1,7 @@
 project(
 	'Coreutils',
 	'c',
-	version: '0.5.0',
+	version: '0.6.3',
 	license: 'MIT',
 	meson_version: '>=0.59.0',
 )
@@ -16,6 +16,7 @@ summary({
 subproject('basename')
 subproject('dirname')
 subproject('mkdir')
+subproject('tty')
 subproject('uname')
 subproject('uptime')
 subproject('yes')
