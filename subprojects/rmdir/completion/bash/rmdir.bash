@@ -7,10 +7,13 @@ _rmdir()
 
 	short=(
 		-h
+		-p
 		-V
 	)
 
 	long=(
+		--ignore-fail-on-non-empty
+		--parents
 		--help
 		--version
 	)
