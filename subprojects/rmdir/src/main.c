@@ -45,7 +45,7 @@ int main(int argc, char *argv[])
 static void usage(void)
 {
 	fprintf(stderr,
-			"Usage: rmdir [-hV]\n"
+			"Usage: rmdir [-hpV]\n"
 			"\n"
 			"  -h, --help                      Show help message and quit\n"
 			"      --ignore-fail-on-non-empty  Do not fail on non-empty directories\n"
