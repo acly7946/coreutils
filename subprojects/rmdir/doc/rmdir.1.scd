@@ -5,7 +5,7 @@ rmdir(1)
 rmdir - remove directory
 
 # SYNOPSIS
-*rmdir* [OPTIONS]
+*rmdir* [OPTIONS] <DIRECTORY> [DIRECTORY2] ...
 
 # OPTIONS
 
