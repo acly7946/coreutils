@@ -48,7 +48,7 @@ static void usage(void)
 			"Usage: rmdir [-hV]\n"
 			"\n"
 			"  -h, --help                      Show help message and quit\n"
-			"      --ignore-fail-on-non-empty  Ignore all failures due to a non-empty directory\n"
+			"      --ignore-fail-on-non-empty  Do not fail on non-empty directories\n"
 			"  -p, --parents                   Remove parent directories\n"
 			"  -V, --version                   Show version number and quit\n");
 	exit(EXIT_FAILURE);
