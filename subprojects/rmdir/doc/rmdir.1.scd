@@ -9,6 +9,12 @@ rmdir - remove directory
 
 # OPTIONS
 
+*--ignore-fail-on-non-empty*
+	Do not fail on non-empty directories
+
+*-p*, *--parents*
+	Remove parent directories
+
 *-h*, *--help*
 	Show help message and quit
 

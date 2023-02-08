@@ -4,7 +4,7 @@ if scdoc.found()
 	scdoc_prog = find_program(scdoc.get_variable(pkgconfig: 'scdoc'), native: true)
 	mandir = get_option('mandir')
 	man_files = [
-		'tty.1.scd',
+		'rmdir.1.scd',
 	]
 
 	foreach filename : man_files
