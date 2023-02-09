@@ -42,6 +42,7 @@ int main(int argc, char *argv[])
 	if(optind == argc)
 	{
 		fprintf(stderr, "rmdir(main.c): must specify directory to remove\n");
+		exit(EXIT_FAILURE);
 	}
 
 	return EXIT_SUCCESS;
