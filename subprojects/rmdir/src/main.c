@@ -1,3 +1,4 @@
+#include <errno.h>
 #include <getopt.h>
 #include <stdbool.h>
 #include <stdio.h>
@@ -62,13 +63,11 @@ int main(int argc, char *argv[])
 		{
 			if(flag_v)
 			{
-				printf("Removing directory '%s'\n", argv[optind]);
+				printf("Removing directory %s\n", argv[optind]);
 			}
-
 			if(rmdir(argv[optind]) == -1)
 			{
-				fprintf(stderr, "rmdir(main.c): failed to remove '%s': ", argv[optind]);
-				perror(NULL);
+				fprintf(stderr, "rmdir(main.c): failed to remove '%s': %s\n", argv[optind], strerror(errno));
 				exit(EXIT_FAILURE);
 			}
 		}
