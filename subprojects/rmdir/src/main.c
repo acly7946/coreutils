@@ -2,6 +2,8 @@
 #include <stdbool.h>
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
+#include <unistd.h>
 
 static void usage(void) __attribute__((noreturn));
 static void version(void) __attribute__((noreturn));
@@ -9,6 +11,9 @@ static void version(void) __attribute__((noreturn));
 int main(int argc, char *argv[])
 {
 	int optc;
+	bool flag_i;
+	bool flag_p;
+	bool flag_v;
 	static struct option long_options[] =
 	{
 		{"help", no_argument, NULL, 'h'},
@@ -18,17 +23,24 @@ int main(int argc, char *argv[])
 		{"version", no_argument, NULL, 'V'},
 	};
 
+	flag_i = false;
+	flag_p = false;
+	flag_v = false;
+
 	while((optc = getopt_long(argc, argv, "hpvV", long_options, NULL)) != EOF)
 	{
 		switch(optc)
 		{
 			case 'i':
+				flag_i = true;
 				break;
 
 			case 'p':
+				flag_p = true;
 				break;
 
 			case 'v':
+				flag_v = true;
 				break;
 
 			case 'V':
@@ -43,6 +55,23 @@ int main(int argc, char *argv[])
 	{
 		fprintf(stderr, "rmdir(main.c): must specify directory to remove\n");
 		exit(EXIT_FAILURE);
+	}
+	else
+	{
+		for(; optind < argc; optind++)
+		{
+			if(flag_v)
+			{
+				printf("Removing directory '%s'\n", argv[optind]);
+			}
+
+			if(rmdir(argv[optind]) == -1)
+			{
+				fprintf(stderr, "rmdir(main.c): failed to remove '%s': ", argv[optind]);
+				perror(NULL);
+				exit(EXIT_FAILURE);
+			}
+		}
 	}
 
 	return EXIT_SUCCESS;
