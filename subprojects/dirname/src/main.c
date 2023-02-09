@@ -34,6 +34,12 @@ int main(int argc, char *argv[])
 		}
 	}
 
+	if(optind == argc)
+	{
+		fprintf(stderr, "rmdir(main.c): must specify directory to remove\n");
+		exit(EXIT_FAILURE);
+	}
+
 	for(; optind < argc; optind++)
 	{
 		printf("%s%c", dirname(argv[optind]), flag_z ? 0 : '\n');
