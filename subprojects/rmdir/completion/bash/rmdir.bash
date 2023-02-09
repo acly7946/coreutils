@@ -8,6 +8,7 @@ _rmdir()
 	short=(
 		-h
 		-p
+		-v
 		-V
 	)
 
@@ -15,6 +16,7 @@ _rmdir()
 		--ignore-fail-on-non-empty
 		--parents
 		--help
+		--verbose
 		--version
 	)
 

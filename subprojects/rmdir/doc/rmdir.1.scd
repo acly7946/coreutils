@@ -18,5 +18,8 @@ rmdir - remove directory
 *-h*, *--help*
 	Show help message and quit
 
+*-v*, *--verbose*
+	Verbose output
+
 *-V*, *--version*
 	Show version number and quit

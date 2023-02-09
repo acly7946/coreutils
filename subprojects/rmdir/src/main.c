@@ -18,7 +18,7 @@ int main(int argc, char *argv[])
 		{"version", no_argument, NULL, 'V'},
 	};
 
-	while((optc = getopt_long(argc, argv, "hV", long_options, NULL)) != EOF)
+	while((optc = getopt_long(argc, argv, "hpvV", long_options, NULL)) != EOF)
 	{
 		switch(optc)
 		{
@@ -45,11 +45,12 @@ int main(int argc, char *argv[])
 static void usage(void)
 {
 	fprintf(stderr,
-			"Usage: rmdir [-hpV] <DIRECTORY> [DIRECTORY2] ...\n"
+			"Usage: rmdir [-hpvV] <DIRECTORY> [DIRECTORY2] ...\n"
 			"\n"
 			"  -h, --help                      Show help message and quit\n"
 			"      --ignore-fail-on-non-empty  Do not fail on non-empty directories\n"
 			"  -p, --parents                   Remove parent directories\n"
+			"  -v, --verbose                   Verbose output\n"
 			"  -V, --version                   Show version number and quit\n");
 	exit(EXIT_FAILURE);
 }
